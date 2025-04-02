@@ -12,6 +12,6 @@ server:
   port: 8081
 eureka:
   client:
-    registry-fetch-interval-seconds: 1
+    registry-fetch-interval-seconds: 2
     serviceUrl:
       defaultZone: http://eureka-server:8761/eureka/
