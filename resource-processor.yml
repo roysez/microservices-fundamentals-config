@@ -28,7 +28,7 @@ eureka:
       defaultZone: http://eureka-server:8761/eureka/
 retry:
   max:
-    attempts: 5
+    attempts: 6
   backoff:
     delay: 2000
     multiplier: 1.5
