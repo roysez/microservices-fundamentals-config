@@ -1,0 +1,42 @@
+spring:
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USER:defaultUser}
+    password: ${RABBITMQ_PASSWORD:defaultPassword}
+  application:
+    name: resource-service
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/resource-db}
+    username: ${RES_DB_USER:postgres}
+    password: ${RES_DB_PASS:postgres}
+server:
+  port: 8084
+songs:
+  service:
+    eureka:
+      id: songs-service
+eureka:
+  client:
+    registry-fetch-interval-seconds: 1
+    serviceUrl:
+      defaultZone: ${EUREKA_DEFAULT_ZONE:http://localhost:8761/eureka/}
+cloud:
+  storage:
+    s3:
+      uri: ${S3_URI:http://localhost:4566}
+      key: ${S3_KEY:test}
+      secret: ${S3_SECRET:test}
+      region: ${S3_REGION:eu-west-3}
+      resources:
+        bucket: ${S3_RESOURCE_BUCKET_NAME:resources}
+rabbit:
+  mq:
+    resources:
+      queue:
+        name: ${RMQ_RESOURCES_QUEUE_NAME:resources}
+      routingKey: ${RMQ_RESOURCES_ROUTING_KEY:#.resources}
+      topic: ${RMQ_RESOURCES_ROUTING_KEY:resources_exchange}

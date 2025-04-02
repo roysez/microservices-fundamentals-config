@@ -1,0 +1,11 @@
+server:
+  port: 0      # Dynamic port assignment (to avoid conflicts)
+
+logging:
+  level:
+    root: INFO
+    org.springframework: DEBUG
+
+spring:
+  application:
+    name: default-application
