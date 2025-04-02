@@ -38,5 +38,10 @@ rabbit:
     resources:
       queue:
         name: resources
-      routingKey: #.resources
+      routingKey: '#.resources'
       topic: resources_exchange
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,refresh
