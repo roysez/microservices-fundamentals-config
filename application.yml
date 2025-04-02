@@ -4,3 +4,9 @@ server:
 spring:
   application:
     name: default-application
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,refresh

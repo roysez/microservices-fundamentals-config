@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: resource-processor
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: defaultUser
+    password: defaultPassword
+server:
+  port: 8083
+rabbit:
+  mq:
+    resources:
+      queue:
+        name: resources
+songs:
+  service:
+    eureka:
+      id: songs-service
+resource:
+  service:
+    eureka:
+      id: resource-service
+eureka:
+  client:
+    registry-fetch-interval-seconds: 1
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/
+retry:
+  max:
+    attempts: 5
+  backoff:
+    delay: 2000
+    multiplier: 1.5

@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: songs-service
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:postgresql://song-db:5432/song-db
+    username: postgres
+    password: postgres
+server:
+  port: 8081
+eureka:
+  client:
+    registry-fetch-interval-seconds: 1
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/
