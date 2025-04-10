@@ -19,6 +19,10 @@ songs:
   service:
     eureka:
       id: songs-service
+storage:
+  service:
+    eureka:
+      id: storage-service
 eureka:
   client:
     registry-fetch-interval-seconds: 1
@@ -35,11 +39,15 @@ cloud:
         bucket: resources
 rabbit:
   mq:
-    resources:
+    topic: resources_exchange
+    resources_upload:
       queue:
-        name: resources
-      routingKey: '#.resources'
-      topic: resources_exchange
+        name: resource_upload
+      routingKey: '#.resources_upload'
+    resources_processed:
+      queue:
+        name: resource_processed
+      routingKey: '#.resources_processed'
 management:
   endpoints:
     web:

@@ -10,9 +10,12 @@ server:
   port: 8083
 rabbit:
   mq:
-    resources:
+    topic: resources_exchange
+    resources_upload:
       queue:
-        name: resources
+        name: resource_upload
+    resources_processed:
+      routingKey: '#.resources_processed'
 songs:
   service:
     eureka:

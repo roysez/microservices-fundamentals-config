@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: storage-service
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:postgresql://storage-db:5434/storage-db
+    username: postgres
+    password: postgres
+server:
+  port: 8089
+eureka:
+  client:
+    registry-fetch-interval-seconds: 1
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/
