@@ -5,7 +5,7 @@ spring:
     hibernate:
       ddl-auto: none
   datasource:
-    url: jdbc:postgresql://storage-db:5434/storage-db
+    url: jdbc:postgresql://storage-db:5432/storage-db
     username: postgres
     password: postgres
 server:
