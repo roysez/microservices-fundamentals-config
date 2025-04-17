@@ -35,3 +35,6 @@ retry:
   backoff:
     delay: 2000
     multiplier: 1.5
+logstash:
+  host: logstash
+  port: 5044
