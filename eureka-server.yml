@@ -13,3 +13,7 @@ logging:
   level:
     com.netflix.eureka: INFO
     com.netflix.discovery: INFO
+management:
+  endpoint:
+    prometheus:
+      enabled: true

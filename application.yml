@@ -9,4 +9,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info,refresh
+        include: '*'
+logstash:
+  host: logstash
+  port: 5044
