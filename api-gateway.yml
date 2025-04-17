@@ -22,3 +22,7 @@ eureka:
       defaultZone: http://eureka-server:8761/eureka/
 server:
   port: 8080
+management:
+  endpoint:
+    prometheus:
+      enabled: true
