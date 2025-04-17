@@ -4,12 +4,3 @@ server:
 spring:
   application:
     name: default-application
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-logstash:
-  host: logstash
-  port: 5044
