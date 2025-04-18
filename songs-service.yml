@@ -18,3 +18,14 @@ eureka:
 logstash:
   host: logstash
   port: 5044
+management:
+  metrics:
+    tags:
+      application: ${spring.application.name}
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    prometheus:
+      enabled: true
