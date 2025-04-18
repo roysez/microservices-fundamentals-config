@@ -48,11 +48,6 @@ rabbit:
       queue:
         name: resource_processed
       routingKey: '#.resources_processed'
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,refresh
 resilience4j.circuitbreaker:
   configs:
     default:
