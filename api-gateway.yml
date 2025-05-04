@@ -41,3 +41,7 @@ management:
 logstash:
   host: logstash
   port: 5044
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.cloud.gateway: DEBUG
